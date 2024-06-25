@@ -98,35 +98,8 @@ $$
 
 扩展到多维后的公式如下：
 
-$$
-\left(\begin{array}{cccccccccccc}
-\cos x \theta_0 & -\sin x \theta_0 & 0 & 0 & \cdots & 0 & 0 & 0 & 0 & \cdots & 0 & 0  \\
-\sin x \theta_0 & \cos x \theta_0 & 0 & 0 & \cdots & 0 & 0 & 0 & 0 & \cdots & 0 & 0  \\
-0 & 0 & \cos x \theta_1 & -\sin x \theta_1 & \cdots & 0 & 0 & 0 & 0 & \cdots & 0 & 0  \\
-0 & 0 & \sin x \theta_1 & \cos x \theta_1 & \cdots & 0 & 0 & 0 & 0 & \cdots & 0 & 0  \\
-\vdots & \vdots & \vdots & \vdots & \ddots & \vdots & \vdots & \vdots & \vdots & \ddots & \vdots & \vdots  \\
-0 & 0 & 0 & 0 & \cdots & \cos x \theta_{d / 4-1} & -\sin x \theta_{d / 4-1} & 0 & 0 & \cdots & 0 & 0  \\
-0 & 0 & 0 & 0 & \cdots & \sin x \theta_{d / 4-1} & \cos x \theta_{d / 4-1} & 0 & 0 & \cdots & 0 & 0\\
-0 & 0 & 0 & 0 & \cdots & 0 & 0 & \cos y \theta_0 & -\sin y \theta_0 & \cdots & 0 & 0\\
-0 & 0 & 0 & 0 & \cdots & 0 & 0 & \sin y \theta_0 & \cos y \theta_0 & \cdots & 0 & 0\\
-\vdots & \vdots & \vdots & \vdots & \ddots & \vdots & \vdots & \vdots & \vdots & \ddots & \vdots & \vdots  \\
-0 & 0 & 0 & 0 & \cdots & 0 & 0 & 0 & 0 & \cdots & \cos y \theta_{d / 4-1} & -\sin y \theta_{d / 4-1}\\
-0 & 0 & 0 & 0 & \cdots & 0 & 0 & 0 & 0 & \cdots & \sin y \theta_{d / 4-1} & \cos y \theta_{d / 4-1}
-\end{array}\right)\left(\begin{array}{c}
-q_{0,0} \\
-q_{0,1} \\
-q_{0,2} \\
-q_{0,3} \\
-\vdots \\
-q_{d/4-1,d/4-2} \\
-q_{d/4-1,d/4-1} \\
-q_{d/4-1,d/4} \\
-q_{d/4-1,d/4+1} \\
-\vdots \\
-q_{d/2-1,d/2-2} \\
-q_{d/2-1,d/2-1}
-\end{array}\right)
-$$
+![picture 0](images/2c0683e56ea9a52c82867f1ff7f1ba985961f20fcb718b8ca3402744aba29b1d.png)  
+
 
 当然了，这个稀疏矩阵也可以简化为：
 
