@@ -18,7 +18,12 @@ f(q, m) = R_mq = \left(\begin{array}{cc:cc}
 \sin m \theta & \cos m \theta & 0 & 0 \\
 \hdashline 0 & 0 & \cos m \theta & -\sin m \theta \\
 0 & 0 & \sin m \theta & \cos m \theta
-\end{array}\right) \left(\begin{array}{c} q_0 \\ q_1 \\ q_2 \\ q_3 \end{array}\right)
+\end{array}\right) \left(\begin{array}{c} 
+q_0 \\ 
+q_1 \\ 
+q_2 \\ 
+q_3 
+\end{array}\right)
 $$
 
 The extended formula for multiple dimensions is as follows:
