@@ -93,7 +93,12 @@ f(q, x, y) = R_{xy}q = \left(\begin{array}{cc:cc}
 \sin x \theta & \cos x \theta & 0 & 0 \\
 \hdashline 0 & 0 & \cos y \theta & -\sin y \theta \\
 0 & 0 & \sin y \theta & \cos y \theta
-\end{array}\right) \left(\begin{array}{c} q_{0,0} \\ q_{0,1} \\ q_{1,0} \\ q_{1,1} \end{array}\right)
+\end{array}\right) \left(\begin{array}{c} 
+q_{0,0} \\ 
+q_{0,1} \\ 
+q_{1,0} \\ 
+q_{1,1} 
+\end{array}\right)
 $$
 
 扩展到多维后的公式如下：

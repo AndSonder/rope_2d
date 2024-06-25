@@ -89,11 +89,17 @@ f(q, x, y) = R_{xy}q = \left(\begin{array}{cc:cc}
 \sin x \theta & \cos x \theta & 0 & 0 \\
 \hdashline 0 & 0 & \cos y \theta & -\sin y \theta \\
 0 & 0 & \sin y \theta & \cos y \theta
-\end{array}\right) \left(\begin{array}{c} q_{0,0} \\ q_{0,1} \\ q_{1,0} \\ q_{1,1} \end{array}\right)
+\end{array}\right) \left(\begin{array}{c} 
+q_{0,0} \\ 
+q_{0,1} \\ 
+q_{1,0} \\ 
+q_{1,1} 
+\end{array}\right)
 $$
 
 The extended formula for multiple dimensions is as follows:
 
+![picture 0](images/2c0683e56ea9a52c82867f1ff7f1ba985961f20fcb718b8ca3402744aba29b1d.png)  
 
 
 
