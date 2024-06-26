@@ -17,6 +17,7 @@ def init_t_xy(end_x: int, end_y: int):
     t = paddle.arange(end_x * end_y, dtype=paddle.float32)
     t_x = t % end_x
     t_y = paddle.divide(t, paddle.to_tensor(end_x, dtype=paddle.float32))
+    t_y = paddle.floor(t_y)
     return t_x, t_y
 
 # ----- calculate the sin and cos values for 2D relative positional encoding -----
