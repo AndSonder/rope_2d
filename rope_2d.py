@@ -1,7 +1,6 @@
 import paddle
 from paddle.incubate.nn.functional import fused_rotary_position_embedding
 
-
 batch_size = 2
 seq_len = 16
 num_heads = 64
@@ -22,20 +21,20 @@ def init_t_xy(end_x: int, end_y: int):
 
 # ----- calculate the sin and cos values for 2D relative positional encoding -----
 # sin, cos: [1, seq_len, 1, head_dim]
-seq_len_x = seq_len_y = seq_len ** 0.5
+seq_len_x = seq_len_y = seq_len**0.5
 t_x, t_y = init_t_xy(seq_len_x, seq_len_y)
-freqs = 1.0 / (
+thetas = 1.0 / (
     rope_theta ** (paddle.arange(0, head_dim, 4)[: (head_dim // 4)] / head_dim)
-) # [head_dim//4]
+)  # [head_dim//4]
 
-# freqs: [head_dim//2]
-freqs = paddle.concat([freqs, freqs], axis=0)
+# thetas: [head_dim//2]
+thetas = paddle.to_tensor([item for item in thetas for _ in range(2)])
 
 # cos_x, cos_y, sin_x, sin_y: [seq_len, head_dim//2]
-cos_x = paddle.cos(paddle.outer(t_x, freqs))
-cos_y = paddle.cos(paddle.outer(t_y, freqs))
-sin_x = paddle.sin(paddle.outer(t_x, freqs))
-sin_y = paddle.sin(paddle.outer(t_y, freqs))
+cos_x = paddle.cos(paddle.outer(t_x, thetas))
+cos_y = paddle.cos(paddle.outer(t_y, thetas))
+sin_x = paddle.sin(paddle.outer(t_x, thetas))
+sin_y = paddle.sin(paddle.outer(t_y, thetas))
 
 # cos, sin: [seq_len, head_dim]
 cos = paddle.concat([cos_x, cos_y], axis=1)
